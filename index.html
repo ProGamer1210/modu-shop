@@ -2,372 +2,470 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MODU – Smarte Alltagslösungen</title>
-  <meta name="description" content="Praktische, modulare Alltagsprodukte aus dem 3D-Druck. Entdecke MODU.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#14251d">
+<meta name="description" content="MODU entwickelt clevere, modulare Alltagshelfer aus dem 3D-Druck.">
+<title>MODU — Clevere Lösungen für jeden Tag</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f6f2;
-      color: #20251f;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #17251f;
-      color: white;
-      padding: 20px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .logo {
-      font-size: 30px;
-      font-weight: 800;
-      letter-spacing: 3px;
-    }
-
-    .logo span {
-      color: #91d7b3;
-    }
-
-    nav {
-      display: flex;
-      gap: 22px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    nav a:hover {
-      color: #91d7b3;
-    }
-
-    .hero {
-      padding: 85px 8%;
-      background: #dce9df;
-      text-align: center;
-    }
-
-    .tag {
-      color: #397255;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 12px;
-    }
-
-    h1 {
-      font-size: clamp(38px, 7vw, 68px);
-      line-height: 1.08;
-      margin: 18px 0;
-      letter-spacing: -2px;
-    }
-
-    .hero p {
-      max-width: 560px;
-      margin: 0 auto 28px;
-      color: #4b584f;
-      font-size: 17px;
-    }
-
-    .button {
-      display: inline-block;
-      background: #244d39;
-      color: white;
-      text-decoration: none;
-      padding: 13px 23px;
-      border-radius: 7px;
-      border: none;
-      font-size: 15px;
-      cursor: pointer;
-    }
-
-    .button:hover {
-      background: #367452;
-    }
-
-    section {
-      padding: 65px 8%;
-    }
-
-    .section-title {
-      font-size: 32px;
-      margin-bottom: 8px;
-    }
-
-    .section-intro {
-      color: #687168;
-      margin-bottom: 30px;
-    }
-
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 22px;
-    }
-
-    .product {
-      background: white;
-      border: 1px solid #e3e7e0;
-      border-radius: 12px;
-      overflow: hidden;
-      transition: transform 0.2s;
-    }
-
-    .product:hover {
-      transform: translateY(-4px);
-    }
-
-    .product-art {
-      min-height: 170px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #e8eee8;
-      color: #315c43;
-      font-size: 48px;
-    }
-
-    .product-info {
-      padding: 22px;
-    }
-
-    .product-info h3 {
-      margin-bottom: 8px;
-      font-size: 20px;
-    }
-
-    .product-info p {
-      color: #687168;
-      font-size: 14px;
-      margin-bottom: 15px;
-    }
-
-    .status {
-      display: inline-block;
-      color: #397255;
-      background: #e1f2e6;
-      padding: 4px 9px;
-      border-radius: 5px;
-      font-size: 12px;
-      margin-bottom: 12px;
-    }
-
-    .about {
-      background: #17251f;
-      color: white;
-    }
-
-    .about p {
-      max-width: 650px;
-      color: #d0d9d2;
-      margin-top: 15px;
-    }
-
-    .contact {
-      text-align: center;
-    }
-
-    footer {
-      background: #101a15;
-      color: #cbd4cd;
-      text-align: center;
-      padding: 25px 8%;
-      font-size: 13px;
-    }
-
-    footer a {
-      color: #91d7b3;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        padding: 18px 6%;
-      }
-
-      nav {
-        gap: 14px;
-      }
-
-      .hero {
-        padding: 65px 6%;
-      }
-
-      section {
-        padding: 48px 6%;
-      }
-    }
-  </style>
+<style>
+:root {
+  --dark: #14251d;
+  --green: #387653;
+  --mint: #bce8cc;
+  --paper: #f5f7f2;
+  --white: #ffffff;
+  --muted: #68746b;
+  --line: #e1e7df;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--dark);
+  line-height: 1.6;
+}
+a { color: inherit; }
+header {
+  background: var(--dark);
+  color: white;
+  padding: 18px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.logo {
+  font-size: 29px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-decoration: none;
+}
+.logo span { color: var(--mint); }
+nav { display: flex; gap: 24px; flex-wrap: wrap; }
+nav a {
+  color: #e1e9e3;
+  text-decoration: none;
+  font-size: 14px;
+}
+nav a:hover { color: var(--mint); }
+.hero {
+  background: var(--dark);
+  color: white;
+  padding: 85px 7% 95px;
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  align-items: center;
+  gap: 45px;
+}
+.eyebrow {
+  color: #a6dfb8;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+h1 {
+  font-size: clamp(42px, 6vw, 72px);
+  letter-spacing: -3px;
+  line-height: 1.04;
+  margin: 18px 0;
+}
+.hero p {
+  max-width: 520px;
+  color: #d3dfd5;
+  font-size: 17px;
+  margin-bottom: 28px;
+}
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.button {
+  display: inline-block;
+  padding: 13px 20px;
+  border: 1px solid var(--green);
+  border-radius: 7px;
+  background: var(--green);
+  color: white;
+  text-decoration: none;
+  font: inherit;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+.button:hover { filter: brightness(1.12); }
+.button.secondary {
+  background: transparent;
+  border-color: #809589;
+}
+.hero-art {
+  min-height: 300px;
+  border-radius: 24px;
+  background: linear-gradient(145deg, #284535, #a9d8b8);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.hero-art::before {
+  content: "M";
+  color: rgba(255,255,255,.12);
+  font-size: 270px;
+  font-weight: 900;
+  position: absolute;
+}
+.hero-symbol {
+  position: relative;
+  font-size: 100px;
+  color: white;
+  text-shadow: 0 15px 35px #19352666;
+}
+section { padding: 72px 7%; }
+.section-head { margin-bottom: 30px; }
+.section-head h2 {
+  font-size: clamp(29px, 4vw, 42px);
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+.section-head p {
+  color: var(--muted);
+  margin-top: 8px;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+.card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform .2s, box-shadow .2s;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px #14251d12;
+}
+.product-art {
+  min-height: 190px;
+  background: #e6eee5;
+  display: grid;
+  place-items: center;
+  color: #315d41;
+  font-size: 68px;
+}
+.art-two { background: #eae8df; color: #6d694a; }
+.art-three { background: #e4eaf0; color: #425c72; }
+.card-content { padding: 22px; }
+.pill {
+  display: inline-block;
+  background: #e6f4e8;
+  color: #28623c;
+  padding: 5px 9px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.card h3 { font-size: 21px; margin-bottom: 7px; }
+.card p { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
+.price { font-size: 15px; font-weight: bold; margin-bottom: 16px; }
+.card .button { width: 100%; text-align: center; }
+.note { color: var(--muted); font-size: 12px; margin-top: 20px; }
+.features {
+  background: #e8eee5;
+}
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+.feature { padding: 10px 0; }
+.feature-icon { font-size: 28px; margin-bottom: 10px; }
+.feature h3 { margin-bottom: 7px; }
+.feature p { color: var(--muted); font-size: 14px; }
+.story {
+  background: var(--dark);
+  color: white;
+}
+.story p {
+  color: #d3dfd5;
+  max-width: 680px;
+  margin-top: 14px;
+}
+.contact {
+  text-align: center;
+}
+.contact .section-head { margin-bottom: 22px; }
+.contact p { color: var(--muted); margin-bottom: 22px; }
+footer {
+  background: #0d1912;
+  color: #d3dfd5;
+  padding: 30px 7%;
+  font-size: 13px;
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+footer a { color: var(--mint); }
+#notice {
+  display: none;
+  max-width: 600px;
+  margin: 22px auto 0;
+  padding: 16px;
+  background: #e5f3e7;
+  border-radius: 8px;
+  color: #204a2c;
+  overflow-wrap: anywhere;
+}
+#notice a { color: #204a2c; font-weight: bold; }
+@media (max-width: 800px) {
+  .hero { grid-template-columns: 1fr; padding-top: 60px; }
+  .hero-art { min-height: 220px; }
+  .product-grid, .feature-grid { grid-template-columns: 1fr; }
+  .product-art { min-height: 150px; }
+}
+@media (max-width: 480px) {
+  header { padding: 16px 5%; }
+  nav { gap: 13px; }
+  section { padding: 48px 5%; }
+  .hero { padding: 55px 5%; }
+  h1 { letter-spacing: -2px; }
+}
+</style>
 </head>
 
 <body>
+<header>
+  <a class="logo" href="#" aria-label="MODU Startseite">MODU<span>.</span></a>
+  <nav aria-label="Hauptnavigation">
+    <a href="#produkte">Produkte</a>
+    <a href="#vorteile">Unsere Idee</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+</header>
 
-  <header>
-    <div class="logo">MODU<span>.</span></div>
-
-    <nav>
-      <a href="#produkte">Produkte</a>
-      <a href="#idee">Unsere Idee</a>
-      <a href="#kontakt">Kontakt</a>
-    </nav>
-  </header>
-
-  <main>
-    <div class="hero">
-      <div class="tag">Einfach clever. Jeden Tag.</div>
-
-      <h1>Weniger Chaos.<br>Mehr Ordnung.</h1>
-
+<main>
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Durchdacht. Praktisch. Modular.</div>
+      <h1>Weniger Chaos.<br>Mehr Alltag.</h1>
       <p>
-        Wir entwickeln praktische Alltagshelfer,
-        die kleine Probleme clever lösen.
-        Gedacht für den Alltag, gemacht mit 3D-Druck.
+        Wir entwickeln clevere Alltagshelfer mit 3D-Druck.
+        Kleine Ideen, die Dinge einfacher machen sollen –
+        Schritt für Schritt verbessert.
       </p>
+      <div class="actions">
+        <a class="button" href="#produkte">Produkte entdecken</a>
+        <a class="button secondary" href="#vorteile">Unsere Idee</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-label="MODU Designmotiv">
+      <div class="hero-symbol">M.</div>
+    </div>
+  </section>
 
-      <a href="#produkte" class="button">Produkte entdecken</a>
+  <section id="produkte">
+    <div class="section-head">
+      <div class="eyebrow">Die ersten Ideen</div>
+      <h2>Praktisch statt kompliziert.</h2>
+      <p>Unsere Produktkonzepte für einen besser organisierten Alltag.</p>
     </div>
 
-    <section id="produkte">
-      <h2 class="section-title">Unsere Produkte</h2>
+    <div class="product-grid">
+      <article class="card">
+        <div class="product-art" aria-hidden="true">⌁</div>
+        <div class="card-content">
+          <span class="pill">Prototyp geplant</span>
+          <h3>MODU Clip</h3>
+          <p>
+            Ein kompakter Kabelhalter mit der Idee,
+            verschiedene Einsätze in einem System zu nutzen.
+          </p>
+          <div class="price">Preis noch offen</div>
+          <button class="button" onclick="requestProduct('MODU Clip')">
+            Interesse anfragen
+          </button>
+        </div>
+      </article>
 
-      <p class="section-intro">
-        Unsere ersten Ideen – entwickelt für deinen Alltag.
-      </p>
+      <article class="card">
+        <div class="product-art art-two" aria-hidden="true">▦</div>
+        <div class="card-content">
+          <span class="pill">Konzept</span>
+          <h3>MODU Box</h3>
+          <p>
+            Ein erweiterbares Ordnungssystem für
+            Schubladen, Kleinteile und Zubehör.
+          </p>
+          <div class="price">Preis noch offen</div>
+          <button class="button" onclick="requestProduct('MODU Box')">
+            Interesse anfragen
+          </button>
+        </div>
+      </article>
 
-      <div class="products">
+      <article class="card">
+        <div class="product-art art-three" aria-hidden="true">⌑</div>
+        <div class="card-content">
+          <span class="pill">Konzept</span>
+          <h3>MODU Hook</h3>
+          <p>
+            Ein vielseitiger Halter für leichte Gegenstände
+            mit unterschiedlichen Einsatzmöglichkeiten.
+          </p>
+          <div class="price">Preis noch offen</div>
+          <button class="button" onclick="requestProduct('MODU Hook')">
+            Interesse anfragen
+          </button>
+        </div>
+      </article>
+    </div>
 
-        <article class="product">
-          <div class="product-art">⌁</div>
-          <div class="product-info">
-            <span class="status">In Entwicklung</span>
-            <h3>MODU Clip</h3>
-            <p>
-              Ein praktischer Kabelhalter,
-              der deinen Schreibtisch ordentlicher macht.
-            </p>
-            <button class="button"
-              onclick="details('MODU Clip')">
-              Interesse zeigen
-            </button>
-          </div>
-        </article>
-
-        <article class="product">
-          <div class="product-art">▦</div>
-          <div class="product-info">
-            <span class="status">In Planung</span>
-            <h3>MODU Box</h3>
-            <p>
-              Ein erweiterbares Ordnungssystem
-              für Schubladen und Kleinteile.
-            </p>
-            <button class="button"
-              onclick="details('MODU Box')">
-              Interesse zeigen
-            </button>
-          </div>
-        </article>
-
-        <article class="product">
-          <div class="product-art">⌑</div>
-          <div class="product-info">
-            <span class="status">In Planung</span>
-            <h3>MODU Hook</h3>
-            <p>
-              Ein vielseitiges Haltersystem
-              für kleine Gegenstände im Haushalt.
-            </p>
-            <button class="button"
-              onclick="details('MODU Hook')">
-              Interesse zeigen
-            </button>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <section id="idee" class="about">
-      <h2 class="section-title">Unsere Idee</h2>
-
-      <p>
-        Warum kompliziert, wenn es einfacher geht?
-        MODU entwickelt praktische Produkte, die
-        Alltagsprobleme lösen sollen.
-      </p>
-
-      <p>
-        Wir starten mit kleinen Prototypen,
-        testen unsere Ideen und verbessern sie
-        Schritt für Schritt.
-      </p>
-    </section>
-
-    <section id="kontakt" class="contact">
-      <h2 class="section-title">Welche Idee fehlt dir?</h2>
-
-      <p class="section-intro">
-        Hilf uns herauszufinden, was wir als Nächstes entwickeln sollen.
-      </p>
-
-      <button class="button"
-        onclick="suggestIdea()">
-        Eigene Produktidee vorschlagen
-      </button>
-
-      <p id="message" style="margin-top:20px;"></p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© <span id="year"></span> MODU – Praktische Ideen aus dem 3D-Druck.</p>
-    <p style="margin-top:8px;">
-      Konzeptwebsite – noch kein aktiver Onlineshop.
+    <p class="note">
+      Hinweis: Die Produkte sind derzeit Konzepte und noch keine
+      bestellbaren oder lieferbaren Artikel. Die Symbole sind Platzhalter.
     </p>
-  </footer>
+  </section>
 
-  <script>
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
+  <section class="features" id="vorteile">
+    <div class="section-head">
+      <div class="eyebrow">Was MODU ausmacht</div>
+      <h2>Gute Ideen beginnen klein.</h2>
+      <p>Wir entwickeln nicht einfach mehr Dinge – wir wollen Dinge besser machen.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature">
+        <div class="feature-icon">⚙</div>
+        <h3>Modular gedacht</h3>
+        <p>Produkte sollen sich ergänzen und nach Möglichkeit erweitern lassen.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">♻</div>
+        <h3>Weniger verschwenden</h3>
+        <p>Kleine Prototypen helfen, Ideen vor einer größeren Produktion zu testen.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">✎</div>
+        <h3>Mit Feedback besser</h3>
+        <p>Wir wollen echte Alltagsprobleme verstehen und unsere Entwürfe verbessern.</p>
+      </div>
+    </div>
+  </section>
 
-    function details(product) {
-      document.getElementById("message").textContent =
-        "Danke für dein Interesse an " + product +
-        "! Die Produkte sind noch in Entwicklung.";
-    }
+  <section class="story">
+    <div class="eyebrow">Unsere Mission</div>
+    <h2 class="section-head" style="margin-top:12px;">
+      Einfachere Lösungen für jeden Tag.
+    </h2>
+    <p>
+      MODU ist ein kleines 3D-Druck-Projekt mit einer großen Idee:
+      praktische Produkte entwickeln, testen und mit echtem Feedback verbessern.
+      Wir starten klein und bauen nur das aus, was wirklich nützlich ist.
+    </p>
+  </section>
 
-    function suggestIdea() {
-      const idea = prompt(
-        "Welches Alltagsproblem sollten wir mit 3D-Druck lösen?"
-      );
+  <section class="contact" id="kontakt">
+    <div class="section-head">
+      <div class="eyebrow">Hilf uns weiter</div>
+      <h2>Was sollten wir entwickeln?</h2>
+    </div>
+    <p>
+      Wähle ein Produkt aus oder schlage eine Idee vor.
+      Dein E-Mail-Programm kann daraus eine Anfrage erstellen.
+    </p>
+    <button class="button" onclick="suggestIdea()">
+      Eigene Idee vorschlagen
+    </button>
+    <div id="notice" role="status" aria-live="polite"></div>
+    <p class="note">
+      Es wird nichts automatisch verschickt. Du prüfst die Nachricht
+      und sendest sie selbst.
+    </p>
+  </section>
+</main>
 
-      if (idea && idea.trim() !== "") {
-        document.getElementById("message").textContent =
-          "Danke für deine Idee! Notiere sie, damit wir sie prüfen können: " +
-          idea.trim();
-      }
-    }
-  </script>
+<footer>
+  <div class="footer-inner">
+    <div>
+      <strong>MODU.</strong>
+      <p>Clevere Alltagsideen aus dem 3D-Druck.</p>
+    </div>
+    <div>
+      <p>© <span id="year"></span> MODU</p>
+      <p>Konzeptwebsite – kein aktiver Onlineshop.</p>
+    </div>
+  </div>
+</footer>
 
+<script>
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+/*
+  WICHTIG:
+  Trage hier später deine eigene Kontakt-E-Mail-Adresse ein.
+  Bis dahin zeigen die Buttons nur eine vorbereitete Anfrage an.
+*/
+const CONTACT_EMAIL = "";
+
+function showNotice(html) {
+  const notice = document.getElementById("notice");
+  notice.innerHTML = html;
+  notice.style.display = "block";
+  notice.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
+function requestProduct(product) {
+  const subject = encodeURIComponent("Interesse an " + product);
+  const body = encodeURIComponent(
+    "Hallo MODU-Team,\n\n" +
+    "ich interessiere mich für " + product + ".\n\n" +
+    "Bitte informiert mich, sobald es Neuigkeiten gibt.\n"
+  );
+  prepareEmail(subject, body);
+}
+
+function suggestIdea() {
+  const idea = prompt(
+    "Welches Alltagsproblem sollten wir mit 3D-Druck lösen?"
+  );
+
+  if (!idea || !idea.trim()) return;
+
+  const subject = encodeURIComponent("Neue Produktidee für MODU");
+  const body = encodeURIComponent(
+    "Hallo MODU-Team,\n\n" +
+    "meine Produktidee:\n" + idea.trim() + "\n"
+  );
+  prepareEmail(subject, body);
+}
+
+function prepareEmail(subject, body) {
+  if (!CONTACT_EMAIL) {
+    showNotice(
+      "Die Anfrage wurde vorbereitet, aber noch nicht versendet. " +
+      "Der Website-Betreiber muss zuerst eine Kontakt-E-Mail-Adresse " +
+      "im Code eintragen. Bis dahin kannst du die Idee für später notieren."
+    );
+    return;
+  }
+
+  const link = "mailto:" + CONTACT_EMAIL +
+    "?subject=" + subject + "&body=" + body;
+
+  showNotice(
+    "Dein E-Mail-Programm öffnet sich mit einer vorbereiteten Nachricht. " +
+    "Bitte prüfe sie vor dem Versenden. " +
+    '<a href="' + link + '">E-Mail öffnen</a>'
+  );
+
+  window.location.href = link;
+}
+</script>
 </body>
 </html>
